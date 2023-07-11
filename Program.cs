@@ -54,7 +54,9 @@ void VGTask15(int InputNumber) // вводимое число. Выводит в
 {
     if (InputNumber == 6 || InputNumber == 7)
         ShowResultMsg($"День недели под номером {InputNumber} это выходной день.");
-    else ShowResultMsg($"День недели под номером {InputNumber} - рабочий день.");
+    else if (InputNumber > 0 && InputNumber < 6)
+        ShowResultMsg($"День недели под номером {InputNumber} - рабочий день.");
+    else ShowResultMsg($"{InputNumber} Не является днем недели.");
 }
 //---------------------------------------------------------------------------------------------------------------------------
 //--------------------------------    ДОПОЛНИТЕЛЬНЫЕ    ---------------------------------------------------------------------
@@ -170,13 +172,13 @@ void TaskExecute(int ItemIndex, string[] Arguments)
             VGTask15(Convert.ToInt32(Arguments[0]));
             break;
         case 3:
-            VGAdditionalTask1(Convert.ToInt32(Arguments[0]),Convert.ToInt32(Arguments[1]),Convert.ToInt32(Arguments[2]));
+            VGAdditionalTask1(Convert.ToInt32(Arguments[0]), Convert.ToInt32(Arguments[1]), Convert.ToInt32(Arguments[2]));
             break;
         case 4:
-            VGAdditionalTask2(Convert.ToInt32(Arguments[0]),Convert.ToInt32(Arguments[1]),Convert.ToInt32(Arguments[2]));
+            VGAdditionalTask2(Convert.ToInt32(Arguments[0]), Convert.ToInt32(Arguments[1]), Convert.ToInt32(Arguments[2]));
             break;
         case 5:
-           VGAdditionalTask3(Convert.ToDouble(Arguments[0]),Convert.ToDouble(Arguments[1]),Convert.ToInt32(Arguments[2]));
+            VGAdditionalTask3(Convert.ToDouble(Arguments[0]), Convert.ToDouble(Arguments[1]), Convert.ToInt32(Arguments[2]));
             break;
         case 6:
             VGAdditionalTask4(Convert.ToInt32(Arguments[0]));
