@@ -30,7 +30,7 @@ void VGTask10(int InputNumber, int NumIndex) // вводимое число,  н
         Temp = Temp / 10;
     int[] Arr = new int[Count];
     for (int Index = 10, ArrCount = 0; Index <= Math.Pow(10, Count); Index *= 10, ArrCount++)
-        Arr[ArrCount] = InputNumber % (Index) / (Index / 10);
+        Arr[ArrCount] = InputNumber % Index / (Index / 10);
     ShowResultMsg($"Введено число {InputNumber}. {NumIndex}-я цифра соответствует значению {Arr[Arr.Length - NumIndex]}");
 }
 //---------------------------------------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ void VGTask13(int InputNumber, int NumIndex) // вводимое число,  н
         Temp = Temp / 10;
     int[] Arr = new int[Count];
     for (int Index = 10, ArrCount = 0; Index <= Math.Pow(10, Count); Index *= 10, ArrCount++)
-        Arr[ArrCount] = InputNumber % (Index) / (Index / 10);
+        Arr[ArrCount] = InputNumber % Index / (Index / 10);
     if (Arr.Length - NumIndex >= 0)
         ShowResultMsg($"Введено число {InputNumber}. {NumIndex}-я цифра соответствует значению {Arr[Arr.Length - NumIndex]}.");
     else ShowResultMsg($"Введено число {InputNumber}. {NumIndex}-й по счету цифры нет в этом числе.");
